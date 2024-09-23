@@ -1,20 +1,15 @@
 <template>
-  
-
-  <p>Hey</p>
-
+  <RegisterComponent />
 </template>
 
 <script>
-
+import RegisterComponent from "@/components/register.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-   
-  }
-}
+    RegisterComponent,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
