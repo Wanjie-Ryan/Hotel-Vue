@@ -9,12 +9,11 @@
       </div>
     </div>
 
-    <form class="container d-flex flex-column mt-3 justify-content-center " style="min-height:90vh; width:60%;">
-      <!-- <input type="text" placeholder="Enter name" />
-      <input type="email" placeholder="Enter Email" />
-      <input type="password" placeholder="Enter Password" />
-      <button>Regsiter</button> -->
-
+    <form
+      class="container d-flex flex-column mt-3 justify-content-center"
+      style="min-height: 90vh; width: 60%"
+    >
+      
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"
           >Username</label
@@ -24,6 +23,8 @@
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="Username"
+          v-model="username"
+          @input="handleUsername"
         />
       </div>
       <div class="mb-3">
@@ -35,22 +36,29 @@
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="name@example.com"
+          v-model="email"
+          @input="handleEmail"
         />
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"
           >Password</label
         >
-        <input
-          type="password"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="Enter your password"
-          
-        />
+        <div class="d-flex">
+
+            <input
+            type="password"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Enter your password"
+            v-model="password"
+            @input="handlePassword"
+            />
+            <i class="bi bi-flower3" style="margin-left:-20px; margin-top:5px; cursor: pointer;"></i>
+        </div>
       </div>
 
-      <button class="btn btn-primary ">Register</button>
+      <button class="btn btn-primary">Register</button>
     </form>
   </div>
 </template>
@@ -58,5 +66,24 @@
 <script>
 export default {
   name: "RegisterComponent",
+  data(){
+    return{
+        username:"",
+        email:"",
+        password:""
+    }
+  },
+  methods:{
+    handleUsername: function(){
+        this.username = event.target.value
+        console.log(this.username)
+    },
+    handleEmail: function(){
+        this.email = event.target.value
+    },
+    handlePassword: function(){
+        this.password = event.target.value
+    }
+  }
 };
 </script>
