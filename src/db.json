@@ -1,7 +1,40 @@
 {
-   "user":[
-    {"name":"John", "email":"john@example.com", "password":"john123"},
-    {"name":"Doe", "email":"hehe@gmail.com", "password":"doe123"}
-    
-   ]
+  "user": [
+    {
+      "name": "John",
+      "email": "john@example.com",
+      "password": "john123",
+      "id": "0232"
+    },
+    {
+      "name": "Doe",
+      "email": "hehe@gmail.com",
+      "password": "doe123",
+      "id": "9bf4"
+    },
+    {
+      "id": "3cd6",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "83d6",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "91ea",
+      "name": "boruzed",
+      "email": "zycojuqa@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "d189",
+      "name": "lamen",
+      "email": "fetonif@mailinator.com",
+      "password": "Pa$$w0rd!"
+    }
+  ]
 }
