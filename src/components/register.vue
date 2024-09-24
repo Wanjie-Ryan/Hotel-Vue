@@ -120,7 +120,7 @@ export default {
         if (!this.username || !this.email || !this.password) {
           this.$toast.open({
             message: "Please fill all fields",
-            type: "error",
+            type: "warning",
             duration: 5000,
             position: "top",
             dismissible: true,
@@ -147,6 +147,7 @@ export default {
             dismissible: true,
             
           })
+          localStorage.setItem("UserInfo", JSON.stringify(response.data))
         }
 
 
