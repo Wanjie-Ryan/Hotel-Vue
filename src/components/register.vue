@@ -77,7 +77,9 @@
         </div>
 
         <div v-else class="w-100 d-flex justify-content-center mx-auto">
-          <button class="btn btn-primary" style="width: 100%" type="submit">Register</button>
+          <button class="btn btn-primary" style="width: 100%" type="submit">
+            Register
+          </button>
         </div>
       </div>
     </form>
@@ -124,7 +126,6 @@ export default {
             duration: 5000,
             position: "top",
             dismissible: true,
-          
           });
           return;
         }
@@ -138,23 +139,20 @@ export default {
         const response = await axios.post("http://localhost:3000/user", data);
         console.log(response);
 
-        if(response.status == 201){
+        if (response.status == 201) {
           this.$toast.open({
             message: "Registration Successfull",
             type: "success",
             duration: 5000,
             position: "top",
             dismissible: true,
-            
-          })
-          localStorage.setItem("UserInfo", JSON.stringify(response.data))
+          });
+          localStorage.setItem("UserInfo", JSON.stringify(response.data));
 
-          setTimeout(()=>{
-            this.$router.push({name:'Home'})
-          },1000)
+          setTimeout(() => {
+            this.$router.push({ name: "Login" });
+          }, 1000);
         }
-
-
       } catch (err) {
         console.log(err);
       } finally {
@@ -163,17 +161,14 @@ export default {
     },
   },
 
-  mounted(){
-    let loggedUser = localStorage.getItem("UserInfo")
-    console.log(loggedUser)
-    if(loggedUser){
-      this.$router.push({name:'Home'})
-    }
-  }
-
+  // mounted() {
+  //   let loggedUser = localStorage.getItem("UserInfo");
+  //   console.log(loggedUser);
+  //   if (loggedUser) {
+  //     this.$router.push({ name: "Home" });
+  //   }
+  // },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
