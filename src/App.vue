@@ -1,14 +1,10 @@
 <template>
-  <RegisterComponent />
+  <router-view />
 </template>
 
 <script>
-import RegisterComponent from "@/components/register.vue";
 export default {
   name: "App",
-  components: {
-    RegisterComponent,
-  },
 };
 </script>
 

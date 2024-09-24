@@ -148,6 +148,10 @@ export default {
             
           })
           localStorage.setItem("UserInfo", JSON.stringify(response.data))
+
+          setTimeout(()=>{
+            this.$router.push({name:'Home'})
+          },1000)
         }
 
 
@@ -158,6 +162,15 @@ export default {
       }
     },
   },
+
+  mounted(){
+    let loggedUser = localStorage.getItem("UserInfo")
+    console.log(loggedUser)
+    if(loggedUser){
+      this.$router.push({name:'Home'})
+    }
+  }
+
 };
 </script>
 
