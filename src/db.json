@@ -53,6 +53,41 @@
       "name": "levytik",
       "email": "wete@mailinator.com",
       "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "d37c",
+      "email": "hehe@gmail.com",
+      "password": "Doe123"
+    },
+    {
+      "id": "09ed",
+      "email": "hehe@gmail.com",
+      "password": "Doe123"
+    },
+    {
+      "id": "238a",
+      "email": "hehe@gmail.com",
+      "password": "Doe123"
+    },
+    {
+      "id": "4876",
+      "email": "hehe@gmail.com",
+      "password": "Doe123"
+    },
+    {
+      "id": "b154",
+      "email": "hehe@gmail.com",
+      "password": "Doe123"
+    },
+    {
+      "id": "d81b",
+      "email": "hehe@gmail.com",
+      "password": "Doe123"
+    },
+    {
+      "id": "583f",
+      "email": "hehe@gmail.com",
+      "password": "Doe123"
     }
   ]
 }

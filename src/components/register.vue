@@ -82,6 +82,7 @@
           </button>
         </div>
       </div>
+      <p>Already Registered? <router-link to="/login">Login</router-link></p>
     </form>
   </div>
 </template>
