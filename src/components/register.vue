@@ -147,7 +147,7 @@ export default {
             position: "top",
             dismissible: true,
           });
-          localStorage.setItem("UserInfo", JSON.stringify(response.data));
+          // localStorage.setItem("UserInfo", JSON.stringify(response.data));
 
           setTimeout(() => {
             this.$router.push({ name: "Login" });
