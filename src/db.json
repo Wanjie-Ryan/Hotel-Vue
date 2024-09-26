@@ -90,24 +90,30 @@
       "password": "Doe123"
     }
   ],
-  "hotels":[
+  "hotels": [
     {
-      "id":1,
-      "name":"Wanjie Fries",
-      "contact":"34494942",
-      "address":"Yoowwwww"
+      "id": "1",
+      "name": "Wanjie Fries",
+      "contact": "34494942",
+      "address": "Yoowwwww"
     },
     {
-      "id":2,
-      "name":"Wanjie Tujis",
-      "contact":"344245",
-      "address":"bawawa"
+      "id": "2",
+      "name": "Wanjie Tujis",
+      "contact": "344245",
+      "address": "bawawa"
     },
     {
-      "id":3,
-      "name":"Damaris Fs",
-      "contact":"6735",
-      "address":"Inaniuma"
+      "id": "3",
+      "name": "Damaris Fs",
+      "contact": "6735",
+      "address": "Inaniuma"
+    },
+    {
+      "id": "3079",
+      "name": "Madeline Stevens",
+      "address": "Eum sunt quo corpor",
+      "contact": "Aut ut aut dolor ani"
     }
   ]
 }

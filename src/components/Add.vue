@@ -206,6 +206,20 @@ export default {
           hotelData
         );
         console.log(response);
+
+        if (response.status == 201) {
+          this.$toast.open({
+            message: "Hote Created Successfully",
+            type: "success",
+            duration: 5000,
+            position: "top",
+            dismissible: true,
+          });
+
+          setTimeout(() => {
+            this.$router.push({ name: "Home" });
+          });
+        }
       } catch (err) {
         console.log(err);
       } finally {
