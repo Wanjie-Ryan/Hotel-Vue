@@ -28,6 +28,10 @@
             <p class="fw-bold text-center">{{ hotel.name }}</p>
             <p>{{ hotel.contact }}</p>
             <p class="text-underline">{{ hotel.address }}</p>
+            <router-link :to="'/updatehotel/' + hotel.id"
+              ><button class="btn btn-primary">Update</button></router-link
+            >
+            <!-- <router-link><button class="btn btn-danger">Delete</button></router-link> -->
           </div>
         </div>
       </div>

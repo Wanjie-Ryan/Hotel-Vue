@@ -205,7 +205,7 @@ export default {
           "http://localhost:3000/hotels",
           hotelData
         );
-        console.log(response);
+        // console.log(response);
 
         if (response.status == 201) {
           this.$toast.open({

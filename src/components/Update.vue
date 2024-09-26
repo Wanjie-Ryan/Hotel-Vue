@@ -64,7 +64,82 @@
       </div>
     </nav>
 
-    <p>Update</p>
+    <form
+      class="form-control"
+      style="
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 50px;
+      "
+      @submit.prevent="UpdateHotel"
+    >
+      <h3 class="text-center">Update Hotel</h3>
+
+      <div class="mx-auto mt-5 d-flex flex-column">
+        <label for="name" class="fw-bold">Name:</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          v-model="name"
+          @input="handleName"
+          required
+        />
+      </div>
+
+      <div class="mx-auto mt-5 d-flex flex-column">
+        <label for="address" class="fw-bold">Address:</label>
+        <input
+          type="text"
+          id="address"
+          class="form-control"
+          v-model="address"
+          @input="handleAddress"
+          required
+        />
+      </div>
+
+      <div class="mx-auto mt-5 d-flex flex-column">
+        <label for="contact" class="fw-bold">Contact:</label>
+        <input
+          type="text"
+          id="contact"
+          class="form-control"
+          v-model="contact"
+          @input="handleContact"
+          required
+        />
+      </div>
+
+      <!-- <button class="mt-3 bg-primary form-control">Add Hotel</button> -->
+
+      <div class="w-100 mt-4">
+        <div v-if="loading">
+          <!-- <span
+            class="spinner-border spinner-border-sm"
+            role="status"
+            aria-hidden="true"
+          ></span>
+          Loading... -->
+          <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+
+        <div v-else class="w-100 d-flex justify-content-center mx-auto">
+          <button
+            class="btn btn-primary form-control"
+            style="width: 100%"
+            type="submit"
+          >
+            Update Hotel
+          </button>
+        </div>
+      </div>
+    </form>
   </div>
 </template>
 

@@ -20,9 +20,9 @@
               >Add Restaurant</a
             >
           </router-link>
-          <router-link to="/updatehotel" class="nav-item">
+          <!-- <router-link to="/updatehotel" class="nav-item">
             <a class="nav-link" href="#">Update Restaurant</a>
-          </router-link>
+          </router-link> -->
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
