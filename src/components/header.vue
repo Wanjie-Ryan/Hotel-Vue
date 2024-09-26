@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Hotel</a>
+      <router-link to="/home" class="navbar-brand" href="#">Hotel</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -15,14 +15,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+          <router-link to="/addhotel" class="nav-item">
             <a class="nav-link active" aria-current="page" href="#"
               >Add Restaurant</a
             >
-          </li>
-          <li class="nav-item">
+          </router-link>
+          <router-link to="/updatehotel" class="nav-item">
             <a class="nav-link" href="#">Update Restaurant</a>
-          </li>
+          </router-link>
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"

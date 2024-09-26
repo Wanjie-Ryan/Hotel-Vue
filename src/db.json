@@ -89,5 +89,25 @@
       "email": "hehe@gmail.com",
       "password": "Doe123"
     }
+  ],
+  "hotels":[
+    {
+      "id":1,
+      "name":"Wanjie Fries",
+      "contact":"34494942",
+      "address":"Yoowwwww"
+    },
+    {
+      "id":2,
+      "name":"Wanjie Tujis",
+      "contact":"344245",
+      "address":"bawawa"
+    },
+    {
+      "id":3,
+      "name":"Damaris Fs",
+      "contact":"6735",
+      "address":"Inaniuma"
+    }
   ]
 }
