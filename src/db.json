@@ -92,10 +92,7 @@
   ],
   "hotels": [
     {
-      "id": "1",
-      "name": "Wanjie Fries",
-      "contact": "34494942",
-      "address": "Yoowwwww"
+      "id": "1"
     },
     {
       "id": "2",

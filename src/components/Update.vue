@@ -144,8 +144,18 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "Update",
+  data() {
+    return {
+      loading: false,
+      name: "",
+      address: "",
+      contact: "",
+    };
+  },
   methods: {
     logout() {
       //    let details = localStorage.removeItem('UserInfo')
@@ -163,6 +173,23 @@ export default {
         this.$router.push({ name: "Login" });
       }, 1000);
     },
+  },
+  async mounted() {
+    let id = this.$route.params.id;
+    // console.log(this.id)
+
+    try {
+      this.loading = true;
+      const response = await axios.get(`http://localhost:3000/hotels/` + id);
+      console.log(response.data);
+      this.name = response.data.name;
+      this.address = response.data.address;
+      this.contact = response.data.contact;
+    } catch (err) {
+      console.log(err);
+    } finally {
+      this.loading = false;
+    }
   },
 };
 </script>
