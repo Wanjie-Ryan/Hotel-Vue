@@ -10,48 +10,41 @@
     <div class="mt-3 d-flex flex-column justify-content-center mx-auto">
       <div v-if="loading">
         <p class="text-center">Loading.....</p>
-
       </div>
 
       <div v-else>
-
         <h3 class="text-center">Our Hotels</h3>
 
-        <div class="d-flex flex-column justify-content-center bg-primary rounded-sm mx-auto rounded-1 " style="width: 60%; margin-top: 30px;">
-
-          <div class="d-flex justify-content-center" style="margin-top:10px;">
-
-
-            <p>f</p>
-            <p>f</p>
-            <p>f</p>
-            <p>f</p>
-
+        <div
+          class="d-flex flex-column justify-content-center bg-primary rounded-sm mx-auto rounded-1"
+          style="width: 60%; margin-top: 30px"
+        >
+          <div
+            class="d-flex justify-content-center"
+            style="margin-top: 10px; gap: 20px"
+            v-for="hotel in hotels"
+            :key="hotel.id"
+          >
+            <p class="fw-bold text-center">{{ hotel.name }}</p>
+            <p>{{ hotel.contact }}</p>
+            <p class="text-underline">{{ hotel.address }}</p>
           </div>
-
-
         </div>
-
-
       </div>
-
-
     </div>
-
-
   </div>
 </template>
 
 <script>
 import Header from "./header.vue";
-import axios from 'axios'
+import axios from "axios";
 export default {
   name: "Home",
   data() {
     return {
       username: "",
-      hotels:[],
-      loading:false
+      hotels: [],
+      loading: false,
     };
   },
   components: {
@@ -69,30 +62,23 @@ export default {
       this.$router.push({ name: "Register" });
     }
 
-    this.fetchHotels()
-
+    this.fetchHotels();
   },
-  methods:{
-    async fetchHotels(){
-
-      try{
-
-        this.loading = true
-        const response = await axios.get('http://localhost:3000/hotels')
-        console.log(response.data)
-        if(response.status === 200){
-          this.hotels = response.data
+  methods: {
+    async fetchHotels() {
+      try {
+        this.loading = true;
+        const response = await axios.get("http://localhost:3000/hotels");
+        console.log(response.data);
+        if (response.status === 200) {
+          this.hotels = response.data;
         }
-
+      } catch (err) {
+        console.log(err);
+      } finally {
+        this.loading = false;
       }
-      catch(err){
-        console.log(err)
-      }
-      finally{
-        this.loading = false
-      }
-
-    }
-  }
+    },
+  },
 };
 </script>
