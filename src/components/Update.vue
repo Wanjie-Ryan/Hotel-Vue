@@ -174,9 +174,8 @@ export default {
       }, 1000);
     },
 
-    async UpdateHotel(){
-      try{
-
+    async UpdateHotel() {
+      try {
         const hotelData = {
           name: this.name,
           address: this.address,
@@ -185,7 +184,7 @@ export default {
 
         this.loading = true;
         const response = await axios.put(
-          "http://localhost:3000/hotels/" +this.$route.params.id,
+          "http://localhost:3000/hotels/" + this.$route.params.id,
           hotelData
         );
         // console.log(response);
@@ -203,16 +202,12 @@ export default {
             this.$router.push({ name: "Home" });
           });
         }
-
+      } catch (err) {
+        console.log(err);
+      } finally {
+        this.loading = false;
       }
-      catch(err){
-        console.log(err)
-      }finally{
-        this.loading = false
-      }
-    }
-
-
+    },
   },
   async mounted() {
     let id = this.$route.params.id;

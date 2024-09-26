@@ -31,7 +31,9 @@
             <router-link :to="'/updatehotel/' + hotel.id"
               ><button class="btn btn-primary">Update</button></router-link
             >
-            <!-- <router-link><button class="btn btn-danger">Delete</button></router-link> -->
+            <button class="btn btn-danger" @click="DeleteHotel(hotel.id)">
+              Delete
+            </button>
           </div>
         </div>
       </div>
@@ -76,6 +78,30 @@ export default {
         console.log(response.data);
         if (response.status === 200) {
           this.hotels = response.data;
+        }
+      } catch (err) {
+        console.log(err);
+      } finally {
+        this.loading = false;
+      }
+    },
+    async DeleteHotel(id) {
+      try {
+        this.loading = true;
+        const response = await axios.delete(
+          "http://localhost:3000/hotels/" + id
+        );
+        console.log(response);
+        if (response.status === 200) {
+          this.$toast.open({
+            message: "Hotel Deleted Successfull",
+            type: "success",
+            duration: 5000,
+            position: "top",
+            dismissible: true,
+          });
+
+          this.fetchHotels();
         }
       } catch (err) {
         console.log(err);
