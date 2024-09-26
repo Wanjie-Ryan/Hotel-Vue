@@ -209,7 +209,7 @@ export default {
 
         if (response.status == 201) {
           this.$toast.open({
-            message: "Hote Created Successfully",
+            message: "Hotel Created Successfully",
             type: "success",
             duration: 5000,
             position: "top",
